@@ -30,7 +30,7 @@ Correo:     demo@tienda.sena
 Contraseña: sena2026
 ```
 
-Sin backend, `src/services/authApi.js` simula la respuesta. Si se define `VITE_API_URL`, se hace un `POST` real a `{VITE_API_URL}/auth/login`.
+Sin backend, la acción `login` del store simula la respuesta. Si se define `VITE_API_URL`, se hace un `POST` real a `{VITE_API_URL}/auth/login`.
 
 ### Variables de entorno
 
@@ -53,7 +53,7 @@ tienda-sena/
 │   │   ├── CatalogGrid.jsx
 │   │   ├── ProductCard.jsx
 │   │   ├── CartPanel.jsx
-│   │   ├── CounterDemo.jsx
+│   │   ├── Counter.jsx
 │   │   └── ProtectedRoute.jsx
 │   ├── pages/
 │   │   ├── Catalog.jsx
@@ -61,8 +61,6 @@ tienda-sena/
 │   │   ├── Login.jsx
 │   │   └── Profile.jsx
 │   ├── services/
-│   │   ├── productsApi.js
-│   │   ├── authApi.js
 │   │   └── api.js
 │   ├── store/
 │   │   ├── useProductStore.js
@@ -71,17 +69,12 @@ tienda-sena/
 │   │   ├── useUiStore.js
 │   │   ├── useAuthStore.js
 │   │   └── useCounterStore.js
-│   ├── utils/format.js
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── styles.css
 ├── docs/
 │   ├── Respuestas_Taller_Zustand.pdf
-│   ├── respuestas.html
-│   ├── arbol-componentes.svg
-│   ├── guia-devtools.md
-│   └── pull-request.md
-├── .env.example
+│   └── arbol-componentes.svg
 ├── index.html
 ├── package.json
 └── vite.config.js
@@ -245,7 +238,7 @@ set(nextState, false, 'cart/updateQty')
 set({ items: [] }, false, 'cart/clear')
 ```
 
-Instala la extensión **Redux DevTools** en Chrome o Firefox, abre la app, agrega productos y revisa el store `CartStore`. La guía está en [`docs/guia-devtools.md`](docs/guia-devtools.md).
+Instala la extensión **Redux DevTools** en Chrome o Firefox, abre la app, agrega productos y revisa el store `CartStore`. Toma la captura del historial y guárdala en `docs/redux-devtools.png`.
 
 ### Estado local vs. global
 
@@ -282,20 +275,17 @@ export async function apiFetch(path, options = {}) {
 ## Documentación
 
 - PDF con respuestas: [`docs/Respuestas_Taller_Zustand.pdf`](docs/Respuestas_Taller_Zustand.pdf)
-- Fuente del PDF: [`docs/respuestas.html`](docs/respuestas.html)
 - Árbol de componentes: [`docs/arbol-componentes.svg`](docs/arbol-componentes.svg)
-- Guía de Redux DevTools: [`docs/guia-devtools.md`](docs/guia-devtools.md)
-- Descripción del Pull Request: [`docs/pull-request.md`](docs/pull-request.md)
 
 ## Git y entrega
 
-El repositorio se trabaja en la rama `feature/zustand` y se integra a `main` con un merge `--no-ff`. La descripción del PR está en `docs/pull-request.md`. El entorno de construcción no tiene remoto de GitHub, por lo que la publicación y la revisión por otro integrante deben hacerse desde la cuenta del grupo.
+El repositorio se trabaja en la rama `feature/zustand` y se integra a `main` con un merge `--no-ff`. El entorno de construcción no tiene remoto de GitHub, por lo que la publicación y la revisión del PR deben hacerse desde la cuenta del grupo.
 
 ## Limitaciones
 
 - El catálogo usa `public/products.json` para funcionar sin backend. `VITE_API_URL` permite conectar un backend Express/Laravel real sin cambiar los stores.
 - El login es una simulación cuando no hay API. El token no es un JWT real ni debe usarse en producción.
-- No se procesan pagos ni se envían pedidos.
+- La captura de Redux DevTools se toma manualmente con la extensión instalada y se guarda en `docs/redux-devtools.png`.
 - El criterio 10 de la lista de chequeo (PR revisado) queda pendiente de la revisión de otro integrante al publicar el repositorio.
 
 ## Referentes

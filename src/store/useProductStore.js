@@ -1,5 +1,10 @@
 import { create } from 'zustand'
-import { getProducts } from '../services/productsApi'
+
+const API = import.meta.env.VITE_API_URL
+
+const catalogUrl = API
+  ? `${API.replace(/\/$/, '')}/products`
+  : '/products.json'
 
 const initialFilters = {
   search: '',
@@ -20,7 +25,18 @@ export const useProductStore = create((set, get) => ({
     set({ loading: true, error: null })
 
     try {
-      const data = await getProducts()
+      const response = await fetch(catalogUrl)
+
+      if (!response.ok) {
+        throw new Error(`No fue posible cargar el catálogo (HTTP ${response.status}).`)
+      }
+
+      const data = await response.json()
+
+      if (!Array.isArray(data) || data.length === 0) {
+        throw new Error('El catálogo llegó vacío o con un formato inesperado.')
+      }
+
       set({ products: data, loading: false, error: null })
     } catch (error) {
       set({

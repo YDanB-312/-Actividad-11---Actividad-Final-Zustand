@@ -1,6 +1,5 @@
 import { useCartStore } from '../store/useCartStore'
 import { useFavoritesStore } from '../store/useFavoritesStore'
-import { formatCOP } from '../utils/format'
 
 export default function ProductCard({ product }) {
   const addItem = useCartStore((state) => state.addItem)
@@ -32,7 +31,7 @@ export default function ProductCard({ product }) {
       <p>{product.description}</p>
 
       <div className="product-card-foot">
-        <span className="price">{formatCOP(product.price)}</span>
+        <span className="price">$ {product.price.toLocaleString('es-CO')}</span>
         <button
           type="button"
           className="button button-small"
