@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tienda SENA: práctica de estado global con Zustand, React y Vite."
+    />
+    <link rel="icon" href="data:," />
+    <title>Tienda SENA</title>
+  </head>
+  <body>
+    <script>
+      // Aplica el tema persistido antes de montar React para evitar el destello.
+      try {
+        const stored = localStorage.getItem('tienda-sena-ui')
+        const theme = stored ? JSON.parse(stored)?.state?.theme : null
+        if (theme === 'dark' || theme === 'light') {
+          document.body.dataset.theme = theme
+          document.documentElement.style.colorScheme = theme
+        }
+      } catch {
+        /* Si localStorage no está disponible, se usa el tema claro. */
+      }
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
