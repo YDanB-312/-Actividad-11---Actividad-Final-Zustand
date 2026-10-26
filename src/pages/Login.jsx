@@ -25,7 +25,7 @@ export default function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const success = await login(form)
+    const success = await login(form.email, form.password)
     if (success) navigate(from, { replace: true })
   }
 

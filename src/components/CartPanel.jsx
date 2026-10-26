@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { selectSubtotal, selectTotalItems, useCartStore } from '../store/useCartStore'
 import { useUiStore } from '../store/useUiStore'
-import { formatCOP } from '../utils/format'
 
 export default function CartPanel() {
   const isOpen = useUiStore((state) => state.isCartOpen)
@@ -60,7 +59,7 @@ export default function CartPanel() {
                 <li className="cart-item" key={item.id}>
                   <div className="cart-item-info">
                     <strong>{item.name}</strong>
-                    <span>{formatCOP(item.price)}</span>
+                    <span>$ {item.price.toLocaleString('es-CO')}</span>
                   </div>
 
                   <div className="cart-item-actions">
@@ -91,7 +90,7 @@ export default function CartPanel() {
                   </div>
 
                   <span className="cart-item-total">
-                    {formatCOP(item.price * item.qty)}
+                    $ {(item.price * item.qty).toLocaleString('es-CO')}
                   </span>
                 </li>
               ))}
@@ -100,7 +99,7 @@ export default function CartPanel() {
             <footer className="cart-footer">
               <div className="cart-total">
                 <span>Total</span>
-                <strong>{formatCOP(total)}</strong>
+                <strong>$ {total.toLocaleString('es-CO')}</strong>
               </div>
               <div className="cart-footer-actions">
                 <button type="button" className="button button-ghost" onClick={clearCart}>

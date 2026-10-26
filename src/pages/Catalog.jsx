@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import CatalogFilters from '../components/CatalogFilters'
 import CatalogGrid from '../components/CatalogGrid'
-import CounterDemo from '../components/CounterDemo'
+import { CounterButtons, CounterDisplay } from '../components/Counter'
 import { useProductStore } from '../store/useProductStore'
 
 export default function Catalog() {
@@ -36,12 +36,15 @@ export default function Catalog() {
 
       <section className="section" aria-labelledby="counter-title">
         <div className="section-header">
-          <h2 id="counter-title">Práctica del contador</h2>
+          <h2 id="counter-title">Contador</h2>
           <p className="hint">
             Paso 2 y 3 de la guía: <code>useCounterStore</code> y selectores.
           </p>
         </div>
-        <CounterDemo />
+        <div className="counter-demo">
+          <CounterDisplay />
+          <CounterButtons />
+        </div>
       </section>
     </main>
   )

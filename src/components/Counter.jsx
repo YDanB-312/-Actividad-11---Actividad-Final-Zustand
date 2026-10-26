@@ -1,6 +1,6 @@
 import { useCounterStore } from '../store/useCounterStore'
 
-function CounterDisplay() {
+export function CounterDisplay() {
   const count = useCounterStore((state) => state.count)
 
   return (
@@ -10,7 +10,7 @@ function CounterDisplay() {
   )
 }
 
-function CounterButtons() {
+export function CounterButtons() {
   const increment = useCounterStore((state) => state.increment)
   const decrement = useCounterStore((state) => state.decrement)
   const reset = useCounterStore((state) => state.reset)
@@ -26,19 +26,6 @@ function CounterButtons() {
       <button type="button" className="button button-ghost button-small" onClick={reset}>
         Reiniciar
       </button>
-    </div>
-  )
-}
-
-export default function CounterDemo() {
-  return (
-    <div className="counter-demo">
-      <CounterDisplay />
-      <CounterButtons />
-      <p className="hint">
-        <code>CounterDisplay</code> y <code>CounterButtons</code> no se pasan
-        props: comparten el mismo <code>useCounterStore</code>.
-      </p>
     </div>
   )
 }
