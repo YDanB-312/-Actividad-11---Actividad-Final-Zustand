@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Mochila Trocha",
+    "category": "Accesorios",
+    "price": 189900,
+    "description": "Lona encerada, costuras reforzadas y espacio para un portátil de 15 pulgadas. Para el camino largo."
+  },
+  {
+    "id": 2,
+    "name": "Audífonos Onda",
+    "category": "Audio",
+    "price": 249900,
+    "description": "Diadema plegable y sonido cálido. Aíslan el ruido del taller y dejan pasar lo importante."
+  },
+  {
+    "id": 3,
+    "name": "Café Cumbre",
+    "category": "Café",
+    "price": 42500,
+    "description": "Grano de altura tostado en lotes pequeños. Notas de panela, cacao y naranja."
+  },
+  {
+    "id": 4,
+    "name": "Libreta Bitácora",
+    "category": "Papelería",
+    "price": 34900,
+    "description": "160 páginas punteadas, encuadernación cosida y una banda que no deja perder tus ideas."
+  },
+  {
+    "id": 5,
+    "name": "Lámpara Faro",
+    "category": "Hogar",
+    "price": 159900,
+    "description": "Luz cálida regulable y brazo articulado. Ilumina el escritorio sin robar espacio."
+  },
+  {
+    "id": 6,
+    "name": "Matera Selva",
+    "category": "Hogar",
+    "price": 58900,
+    "description": "Cerámica hecha a mano con plato de drenaje. Viene con una planta de interior sorpresa."
+  },
+  {
+    "id": 7,
+    "name": "Camiseta Lienzo",
+    "category": "Ropa",
+    "price": 69900,
+    "description": "Algodón pesado, corte relajado y estampado de un solo color. Para todos los días."
+  },
+  {
+    "id": 8,
+    "name": "Tenis Paso",
+    "category": "Calzado",
+    "price": 219900,
+    "description": "Suela de caucho, cordones de algodón y una silueta que aguanta el pavimento."
+  },
+  {
+    "id": 9,
+    "name": "Termo Alto",
+    "category": "Accesorios",
+    "price": 84900,
+    "description": "24 horas de frío o 12 de calor. Acero inoxidable y tapa que no gotea."
+  },
+  {
+    "id": 10,
+    "name": "Gafas Sol",
+    "category": "Accesorios",
+    "price": 119900,
+    "description": "Acetato reciclado y lentes con protección UV400. Para mirar el futuro de frente."
+  },
+  {
+    "id": 11,
+    "name": "Taza Tinto",
+    "category": "Hogar",
+    "price": 39900,
+    "description": "Gres esmaltado, 320 ml y un asa cómoda. El primer café del día merece una buena taza."
+  },
+  {
+    "id": 12,
+    "name": "Parlante Ritmo",
+    "category": "Audio",
+    "price": 179900,
+    "description": "Bluetooth 5.3, 12 horas de batería y un cuerpo resistente a salpicaduras."
+  }
+]
