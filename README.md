@@ -72,9 +72,6 @@ tienda-sena/
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── styles.css
-├── docs/
-│   ├── Respuestas_Taller_Zustand.pdf
-│   └── arbol-componentes.svg
 ├── index.html
 ├── package.json
 └── vite.config.js
@@ -272,11 +269,6 @@ export async function apiFetch(path, options = {}) {
 }
 ```
 
-## Documentación
-
-- PDF con respuestas: [`docs/Respuestas_Taller_Zustand.pdf`](docs/Respuestas_Taller_Zustand.pdf)
-- Árbol de componentes: [`docs/arbol-componentes.svg`](docs/arbol-componentes.svg)
-
 ## Git y entrega
 
 El repositorio se trabaja en la rama `feature/zustand` y se integra a `main` con un merge `--no-ff`. El entorno de construcción no tiene remoto de GitHub, por lo que la publicación y la revisión del PR deben hacerse desde la cuenta del grupo.
@@ -285,7 +277,7 @@ El repositorio se trabaja en la rama `feature/zustand` y se integra a `main` con
 
 - El catálogo usa `public/products.json` para funcionar sin backend. `VITE_API_URL` permite conectar un backend Express/Laravel real sin cambiar los stores.
 - El login es una simulación cuando no hay API. El token no es un JWT real ni debe usarse en producción.
-- La captura de Redux DevTools se toma manualmente con la extensión instalada y se guarda en `docs/redux-devtools.png`.
+- La captura de Redux DevTools (ejercicio 6) se toma manualmente con la extensión instalada y se entrega junto con la parte escrita.
 - El criterio 10 de la lista de chequeo (PR revisado) queda pendiente de la revisión de otro integrante al publicar el repositorio.
 
 ## Referentes
