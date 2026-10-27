@@ -81,7 +81,7 @@
   <text class="sub" x="209" y="328">useShallow</text>
 
   <rect class="box" x="360" y="290" width="150" height="50"/>
-  <text class="title" x="374" y="312">CounterDemo</text>
+  <text class="title" x="374" y="312">Counter</text>
   <text class="sub" x="374" y="328">counter</text>
 
   <!-- ProductCard -->
